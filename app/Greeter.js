@@ -1,5 +1,7 @@
+var messages = require('./messages.json');
+
 module.exports = function() {
     var greet = document.createElement('div');
-    greet.textContent = "Hi there and greetings!";
+    greet.textContent = messages.greetingText;
     return greet;
 };
