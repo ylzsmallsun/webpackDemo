@@ -1,10 +1,11 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',   // set source mapping to enhance the debugging process
     entry:  __dirname + "/index.js",
     output: {
-      path: __dirname + "/public", //打包后的文件存放的地方
+      path: __dirname + "/build", //打包后的文件存放的地方
       filename: "bundle.js" //打包后输出文件的文件名
     },
     devServer: {
@@ -40,6 +41,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.BannerPlugin('Author: Smallsun<br/> Year: 2018')
+        new webpack.BannerPlugin('Author: Smallsun<br/> Year: 2018'),
+        new HtmlWebpackPlugin({
+            template: __dirname + "/app/index.tmpl.html"
+        })
     ] 
 }
