@@ -1,0 +1,19 @@
+{
+  "name": "webpackdemo",
+  "version": "1.0.0",
+  "description": "webpack demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Lingzhen Yang",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3"
+  }
+}
