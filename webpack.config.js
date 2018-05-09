@@ -30,6 +30,8 @@ module.exports = {
                             modules: true, // launch css modules
                             localIdentName: '[name]__[local]--[hash:base64:5]' // set class name format
                         }
+                    }, {
+                        loader: "postcss-loader"
                     }
                 ]
             }

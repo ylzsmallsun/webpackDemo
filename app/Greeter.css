@@ -3,4 +3,7 @@
     padding: 0.5rem;
     border: 2px solid #cccccc;
     width: 80%;
+    box-shadow: 5px 8px 5px #888888;
+    /* test auto prefix of postcss */
+    user-select: none;
 }
