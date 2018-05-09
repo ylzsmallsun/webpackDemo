@@ -1,7 +1,13 @@
-var messages = require('./messages.json');
+import React, {Component} from 'react';
+import messages from './messages.json';
 
-module.exports = function() {
-    var greet = document.createElement('div');
-    greet.textContent = messages.greetingText;
-    return greet;
-};
+class Greeter extends Component {
+    render() {
+        return (
+            <div>
+                {messages.greetingText}
+            </div>
+        );
+    }
+}
+export default Greeter

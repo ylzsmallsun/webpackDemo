@@ -1,4 +1,8 @@
-const greeter = require('./app/Greeter.js');
+import React from 'react';
+import {render} from 'react-dom';
+import Greeter from './app/Greeter';
 
-document.querySelector("#root").appendChild(greeter());
+let content = <div><h1>Webpack & React demo</h1><Greeter /></div>;
+render(content, document.getElementById('root'));
+
 
