@@ -8,6 +8,8 @@ class Greeter extends Component {
         return (
             <div className={styles.message}>
                 {messages.greetingText}
+                {/* below text is to test hot update*/}
+                <span>aaasccca</span>
             </div>
         );
     }
