@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
     devtool: 'eval-source-map',   // set source mapping to enhance the debugging process
     entry:  __dirname + "/index.js",
@@ -36,5 +38,8 @@ module.exports = {
                 ]
             }
         ]
-    } 
+    },
+    plugins: [
+        new webpack.BannerPlugin('Author: Smallsun<br/> Year: 2018')
+    ] 
 }
