@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -38,12 +39,23 @@ module.exports = {
             }
         ]
     },
+    optimization: {
+        minimize: true, // default is true if it is not set
+        minimizer: [
+            new UglifyJsPlugin({
+              cache: true,
+              parallel: true,
+              sourceMap: true
+            })
+        ]
+    },
     plugins: [
         new webpack.BannerPlugin('Author: Smallsun<br/> Year: 2018'),
         new HtmlWebpackPlugin({
             template: __dirname + "/app/index.tmpl.html"
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
         new ExtractTextPlugin("style.css")
     ] 
 }
