@@ -1,6 +1,11 @@
 /*! Author: Smallsun<br/> Year: 2018 */
 h1 {
     color: crimson;
+}
+
+.QY73sj9WnlAF4mqu10U40 {
+    height: 400px;
+    width: 400px;
 }._3r0xghkIonN6MIsb8XYdfe {
     background-color: coral;
     padding: 0.5rem;
@@ -9,4 +14,8 @@ h1 {
     box-shadow: 5px 8px 5px #888888;
     /* test auto prefix of postcss */
     user-select: none;
+}
+._3Xbsxrjx26in8PxEHcPyEk {
+    height: 400px ;
+    width: 400px !important;
 }
