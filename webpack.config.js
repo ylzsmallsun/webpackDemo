@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',   // set source mapping to enhance the debugging process
@@ -39,25 +38,14 @@ module.exports = {
                         loader: "postcss-loader"
                     }
                 ]
-            },
-            {
-                test: /\.mp4$/,
-                loader: 'url-loader?limit=10000&name=/videos/[name]&mimetype=video/mp4'
             }
         ]
     },
     plugins: [
         new webpack.BannerPlugin('Author: Smallsun<br/> Year: 2018'),
         new HtmlWebpackPlugin({
-            template: __dirname + "/src/index.tmpl.html"
+            template: __dirname + "/app/index.tmpl.html"
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new CopyWebpackPlugin([
-            { 
-                from: './assets' , 
-                to: 'static',
-                force: true
-            }
-        ])
+        new webpack.HotModuleReplacementPlugin()
     ] 
 }
